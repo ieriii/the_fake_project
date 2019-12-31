@@ -1,0 +1,1 @@
+This is an app to check whether online reviews are fake or genuine based on deceptive clues hidden in text.
