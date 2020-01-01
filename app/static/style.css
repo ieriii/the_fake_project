@@ -40,8 +40,8 @@ body {
 }
 
 .choose-file-button {
-    width: 800px;
-    height: 1000px;
+    width: 500px;
+    height: 500px;
     border-radius: 2px;
     background-color: #ffffff;
     border: solid 1px #7052CB;
