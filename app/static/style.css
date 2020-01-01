@@ -21,6 +21,11 @@ body {
     color: #262626;
 }
 
+.p{
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
 .content {
     margin-top: 10em;
 }
