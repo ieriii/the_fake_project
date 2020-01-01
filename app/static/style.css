@@ -39,9 +39,9 @@ body {
     font-size: 13px;
 }
 
-.choose-file-button {
+form.choose-file-button {
     width: 200px;
-    height: 150px;
+    height: 200px;
     border-radius: 2px;
     background-color: #ffffff;
     border: solid 1px #7052CB;
