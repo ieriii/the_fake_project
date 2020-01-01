@@ -32,8 +32,8 @@ function analyze() {
             var response = JSON.parse(e.target.responseText);
             var predictions = response['result']
             el('result-label').innerHTML = `Result = ${predictions[0]}`;
-            el('result-prob_fake').innerHTML = `Probability fake = ${predictions[2]}`;
-            el('result-prob_genuine').innerHTML = `Probability genuine = ${predictions[3]}`;
+            el('result-prob-fake').innerHTML = `Probability fake = ${predictions[2]}`;
+            el('result-prob-genuine').innerHTML = `Probability genuine = ${predictions[3]}`;
         }
         el('analyze-button').innerHTML = 'Analyze';
     }
