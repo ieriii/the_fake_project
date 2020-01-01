@@ -41,7 +41,8 @@ body {
 
 input[type="text"]{ 
   padding: 20px 10px; 
-  line-height: 28px; 
+  line-height: 28px;
+  overflow-wrap: break-word;
 }
 
 button.choose-file-button {
