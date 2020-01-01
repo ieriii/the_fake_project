@@ -39,8 +39,12 @@ body {
     font-size: 13px;
 }
 
+input[type="text"]{ 
+  padding: 20px 10px; 
+  line-height: 28px; 
+}
 
-input.choose-file-button {
+button.choose-file-button {
     width: 200px;
     height: 200px;
     border-radius: 2px;
