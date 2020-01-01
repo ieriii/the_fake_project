@@ -32,9 +32,12 @@ function analyze() {
             var response = JSON.parse(e.target.responseText);
             var predictions = response['result'];
             var array = predictions.split(',');
-            el('result-label').innerHTML = `Result = ${array[0]}`;
-            el('result-prob-fake').innerHTML = `Probability fake = ${array[2]}`;
-            el('result-prob-genuine').innerHTML = `Probability genuine = ${array[3]}`;
+            var label = array[0].split(' ')[1]
+            var prob_fake = array[2].split('[')[1]
+            var prob_genuine = array[3].split(']')[0]
+            el('result-label').innerHTML = `The review is = ${label}`;
+            el('result-prob-fake').innerHTML = `Probability review being fake = ${prob_fake}`;
+            el('result-prob-genuine').innerHTML = `Probability review being genuine = ${prob_genuine}`;
         }
         el('analyze-button').innerHTML = 'Analyze';
     }
