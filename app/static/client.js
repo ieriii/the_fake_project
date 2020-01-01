@@ -30,7 +30,10 @@ function analyze() {
         if (this.readyState === 4) {
             console.log("e.target:", e.target)
             var response = JSON.parse(e.target.responseText);
-            el('result-label').innerHTML = `Result = ${response['result']}`;
+            var predictions = response['result']
+            el('result-label').innerHTML = `Result = ${predictions[0]}`;
+            el('result-prob_fake').innerHTML = `Probability fake = ${predictions[2]}`;
+            el('result-prob_genuine').innerHTML = `Probability genuine = ${predictions[3]}`;
         }
         el('analyze-button').innerHTML = 'Analyze';
     }
