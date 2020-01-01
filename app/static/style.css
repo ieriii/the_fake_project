@@ -49,6 +49,16 @@ form.choose-file-button {
     color: #7052CB;
 }
 
+button.choose-file-button {
+    width: 200px;
+    height: 200px;
+    border-radius: 2px;
+    background-color: #ffffff;
+    border: solid 1px #7052CB;
+    font-size: 13px;
+    color: #7052CB;
+}
+
 button.analyze-button {
     width: 200px;
     height: 40px;
