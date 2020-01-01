@@ -8,7 +8,7 @@ body {
 
 .center {
     margin: auto;
-    padding: 10px 50px;
+    padding: 5px 50px;
     text-align: center;
     font-size: 14px;
 }
@@ -21,13 +21,8 @@ body {
     color: #262626;
 }
 
-.p{
-  margin-top: 1em;
-  margin-bottom: 1em;
-}
-
 .content {
-    margin-top: 10em;
+    margin-top: 5em;
 }
 
 .analyze {
