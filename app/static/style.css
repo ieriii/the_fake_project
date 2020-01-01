@@ -39,7 +39,7 @@ body {
     font-size: 13px;
 }
 
-button.choose-file-button {
+.choose-file-button {
     width: 800px;
     height: 1000px;
     border-radius: 2px;
