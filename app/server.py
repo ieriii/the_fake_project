@@ -59,7 +59,9 @@ async def analyze(request):
     terms = ['hotel', 'staff', 'reception', 'room', 'stay', 'desk', 'food', 'restaurant',
              'bed', 'chair', 'carpet', 'shower', 'napkin', 'bread', 'course', 'dish', 'stay'
              'vacation', 'holiday', 'holidays', 'table', 'knife', 'fork', 'spoon', 'dessert',
-             'waiter', 'waitress', 'receptionist', 'tv'
+             'waiter', 'waitress', 'receptionist', 'tv', 'bartender', 'lunch', 'dinner', 'menu'
+             'chef', 'meal', 'amenity', 'amenities', 'check-in', 'door', 'bath', 'bathtub', 
+             'minibar', 'bar', 'television', 'telly', 'suite', 'ensuite', 'bathroom', 'service'
             ]
     
     data = await request.json()
@@ -70,7 +72,7 @@ async def analyze(request):
         prediction = learn.predict(review)
         return JSONResponse({'result': str(prediction)})
     else:
-        return JSONResponse({'result': '(Category Sorry. This does not seem to be an hotel or restaurant review., tensor(0), tensor([0, 0])'})
+        return JSONResponse({'result': '(Category Uhm... Sorry. This does not seem to be an hotel or restaurant review. Try a different one?, tensor(0), tensor([0, 0])'})
 
 
 if __name__ == '__main__':
