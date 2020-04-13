@@ -57,8 +57,8 @@ async def index(request):
 @app.route('/analyze', methods=['POST'])
 async def analyze(request):
     data = await request.json()
-    img = data["textField"]
-    prediction = learn.predict(img)
+    review = data["textField"]
+    prediction = learn.predict(review)
     return JSONResponse({'result': str(prediction)})
 
 
