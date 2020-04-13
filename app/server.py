@@ -56,11 +56,21 @@ async def index(request):
 
 @app.route('/analyze', methods=['POST'])
 async def analyze(request):
+    terms = ['hotel', 'staff', 'reception', 'room', 'stay', 'desk', 'food', 'restaurant',
+             'bed', 'chair', 'carpet', 'shower', 'napkin', 'bread', 'course', 'dish', 'stay'
+             'vacation', 'holiday', 'holidays', 'table', 'knife', 'fork', 'spoon', 'dessert',
+             'waiter', 'waitress', 'receptionist', 'tv'
+            ]
+    
     data = await request.json()
     review = data["textField"]
-    prediction = learn.predict(review)
-    return JSONResponse({'result': str(prediction)})
-
+    
+    is_review = [element for element in terms if(element in review.lower())]
+    if bool(is_review):
+        prediction = learn.predict(review)
+        return JSONResponse({'result': str(prediction)})
+    else:
+        return JSONResponse({'result': 'Sorry. This does not seem to be an hotel or restaurant review.'})
 
 
 if __name__ == '__main__':
