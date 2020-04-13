@@ -32,7 +32,7 @@ function analyze() {
             var response = JSON.parse(e.target.responseText);
             var predictions = response['result'];
             var array = predictions.split(',');
-            var label = array[0].split(' ')[1]
+            var label = array[0].split(/\s(.+)/)[1]
             var prob_fake = array[2].split('[')[1]
             var prob_genuine = array[3].split(']')[0]
             el('result-label').innerHTML = `The review is = ${label}`;
