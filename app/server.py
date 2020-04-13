@@ -70,7 +70,7 @@ async def analyze(request):
         prediction = learn.predict(review)
         return JSONResponse({'result': str(prediction)})
     else:
-        return JSONResponse({'result': 'Sorry. This does not seem to be an hotel or restaurant review.'})
+        return 'Sorry. This does not seem to be an hotel or restaurant review.'
 
 
 if __name__ == '__main__':
